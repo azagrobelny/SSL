@@ -10,6 +10,8 @@ contained between the -----BEGIN CERTIFICATE REQUEST----- and -----END CERTIFICA
 
 Convert PEM to PFX
 openssl pkcs12 -export -out certificate.pfx -inkey privateKey.key -in certificate.crt -certfile more.crt
+Convert PFX to CRT 
+openssl pkcs12 -in input.pfx -out mycerts.crt -nokeys -clcerts
 Convert PEM to PKCS#12
 openssl pkcs12 -export -out certificate.pfx -inkey privateKey.key -in certificate.crt -certfile CACert.crt
 Convert PEM to DER
